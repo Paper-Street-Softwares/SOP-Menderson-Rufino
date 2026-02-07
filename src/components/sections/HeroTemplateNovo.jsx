@@ -42,12 +42,12 @@ function HeroTemplateNovo({
 }) {
   switch (colorMode) {
     case 'light':
-      backgroundMode = 'bg-white'
-      bgFaixaHero = 'bg-secondary'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
+      backgroundMode = 'bg-primaryDark'
+      bgFaixaHero = 'bg-transparent'
+      text = 'text-corTitulosBranca'
+      textOpacity = 'text-corOutrosTextosBranca'
       textDestaque = 'text-primaryDark'
-      bgMinitag = 'bg-white border-primaryDark text-primaryDark'
+      bgMinitag = 'bg-primaryDark border-white text-white'
       // textObs = 'text-green-500'
       image = ' border-[8px] border-white'
       bgAlertHero = 'bg-white'
@@ -67,16 +67,17 @@ function HeroTemplateNovo({
 
       break
     case 'default':
-      backgroundMode = 'bg-white'
-      bgFaixaHero = 'bg-secondary'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryDark'
-      bgMinitag = 'bg-white border-primaryDark text-primaryDark'
+      backgroundMode = 'bg-primaryDark'
+      bgFaixaHero = 'bg-[color-mix(in_srgb,var(--primaryDark),black_30%)]'
+
+      text = 'text-corTitulosBranca'
+      textOpacity = 'text-corOutrosTextosBranca'
+      textDestaque = 'text-primaryLight'
+      bgMinitag = 'bg-transparent border-primaryLight text-primaryLight'
       // textObs = 'text-green-500'
-      image = ' border-[8px] border-white'
-      bgAlertHero = 'bg-white'
-      borderColor = 'bg-white'
+      image = ' border-[8px] border-borderImage'
+      bgAlertHero = 'bg-black text-white/60'
+      borderColor = 'border-terciary'
   }
 
   const { showGlobalButton } = useColorMode()
@@ -113,7 +114,7 @@ function HeroTemplateNovo({
       paddingTopAndBottom={false}
       className={`${backgroundMode}`}
     >
-      <section className="relative w-full pt-[110px] phone2:pt-[110px] pb-[30px] tablet1:pb-[64px] desktop1:pb-[96px] phone3:pt-[150px] tablet1:pt-[170px] tablet2:pt-[180px] desktop1:pt-[180px] flex items-center justify-center overflow-hidden font-mainFont">
+      <section className="relative w-full pt-[110px] phone2:pt-[110px] pb-[64px] desktop1:pb-[96px] phone3:pt-[150px] tablet1:pt-[170px] tablet2:pt-[180px] desktop1:pt-[180px] flex items-center justify-center overflow-hidden font-mainFont">
         {/* Abstract Background Shapes */}
         <div
           className={`absolute top-0 right-[-10px] h-full w-[80%] -skew-x-12 translate-x-2/4 z-0 ${bgFaixaHero}`}
@@ -186,7 +187,6 @@ function HeroTemplateNovo({
                   link={`tel:${content.texts.infos.phone}`}
                   label="Emergência? Ligue agora!"
                   colorMode={colorMode}
-                  className="text-white"
                 />
               </div>
               {/* <hr
@@ -231,7 +231,7 @@ function HeroTemplateNovo({
               className="relative order-1 lg:order-2"
             >
               <div
-                className={`relative rounded-[1.5rem] phone2:rounded-[2.5rem] overflow-hidden aspect-[2/1] phone2:aspect-[3/2] md:aspect-[3/2] shadow-2xl lg:aspect-[3/4] ring-1 ring-black/5 bg-gray-100 ${image}`}
+                className={`relative rounded-[1.5rem] phone2:rounded-[2.5rem] overflow-hidden aspect-[2/1] phone2:aspect-[3/2] md:aspect-[3/2] shadow-2xl lg:aspect-[3/4] ring-1 ring-black/5 ${borderColor} ${image}`}
               >
                 <img
                   src={content.texts.hero.heroDefaulMobiletImg}
