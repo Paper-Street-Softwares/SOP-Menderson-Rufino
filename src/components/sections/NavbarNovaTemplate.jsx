@@ -77,8 +77,8 @@ function NavbarNovaTemplate({
           <div
             className={`flex flex-col z-20 relative  ${
               isScrolled
-                ? 'w-[20%] tablet1:w-[20%] tablet2:w-[15%] desktop1:w-[10%] desktop2:w-[10%] desktop3:w-[8%] transition-all duration-700'
-                : 'py-3 w-[30%] tablet1:w-[30%] tablet2:w-[25%] desktop1:w-[15%] desktop3:w-[15%] transition-all duration-700'
+                ? 'w-[20%] tablet1:w-[15%] tablet2:w-[15%] desktop1:w-[10%] desktop2:w-[10%] desktop3:w-[8%] transition-all duration-700'
+                : 'py-3 w-[30%] tablet1:w-[20%] tablet2:w-[20%] desktop1:w-[15%] desktop3:w-[15%] transition-all duration-700'
             }`}
           >
             <a
@@ -91,16 +91,16 @@ function NavbarNovaTemplate({
                 src={content.texts.navbar.logo.img}
                 alt={content.texts.navbar.logo.alt}
                 className="w-[100%] desktop1:hidden"
-                width={195}
-                height={105}
+                width={185}
+                height={89}
                 fetchPriority="high"
               />
               <img
                 src={content.texts.navbar.logo.imgDesktop}
                 alt={content.texts.navbar.logo.alt}
                 className="w-[100%] hidden desktop1:flex"
-                width={350}
-                height={188}
+                width={182}
+                height={88}
                 fetchPriority="high"
               />
             </a>
@@ -156,8 +156,6 @@ function NavbarNovaTemplate({
                 </svg>
               }
               colorMode={colorMode}
-              className={`text-sm mb-0 ${borderButtons} bg-white text-corTitulosPreto border border-primaryDark/20`}
-              shineClass={`bg-primaryDark/20`}
             />
           </div>
 
@@ -204,7 +202,7 @@ function NavbarNovaTemplate({
                             aria-label={`Link para ${item}`}
                             title={item}
                             data-track={id}
-                            className={`cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity}`}
+                            className={`cursor-pointer bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity}`}
                             onClick={(e) => {
                               e.preventDefault()
                               const el = document.getElementById(id)
@@ -240,8 +238,6 @@ function NavbarNovaTemplate({
                     link={content.texts.links.ctaWhatsapp}
                     label={content.texts.navbar.ctaButtonText}
                     colorMode={colorMode}
-                    className={`w-fit text-sm mb-0 ${borderButtons} bg-white text-corTitulosPreto border border-primaryDark/20`}
-                    shineClass={`bg-primaryDark/20`}
                   />
                 </div>
               </motion.div>
