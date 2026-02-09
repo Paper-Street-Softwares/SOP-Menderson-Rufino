@@ -91,8 +91,8 @@ function NavbarNovaTemplate({
                 src={content.texts.navbar.logo.img}
                 alt={content.texts.navbar.logo.alt}
                 className="w-[100%] desktop1:hidden"
-                width={185}
-                height={89}
+                width={195}
+                height={105}
                 fetchPriority="high"
               />
               <img
