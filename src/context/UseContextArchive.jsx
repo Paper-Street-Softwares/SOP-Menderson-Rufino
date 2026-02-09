@@ -30,7 +30,7 @@ export const whatsAppThemes = {
 export const defaultButtonThemes = {
   light: 'bg-primaryDark text-corTitulosBranca border border-primaryDark/20 ',
   dark: 'bg-primaryLight text-corTitulosPreto',
-  default: 'bg-primaryLight text-corTitulosPreto ',
+  default: 'bg-secondary text-corTitulosPreto ',
 }
 
 export const alertTheme = {

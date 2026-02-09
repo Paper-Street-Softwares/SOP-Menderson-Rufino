@@ -256,6 +256,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                 link={content.texts.links.ctaWhatsapp}
                 label={content.texts.navbar.ctaButtonText}
                 colorMode={colorMode}
+                bgClass={`bg-primaryDark text-white`}
               />
             </div>
           </Dialog>

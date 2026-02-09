@@ -121,7 +121,7 @@ const content = {
       title: (
         <h1>
           Direito não se perde, se{' '}
-          <span className="destaque relative italic font-light">
+          <span className="destaqueHero relative italic font-light">
             defende
             <span>
               <svg
@@ -362,7 +362,7 @@ const content = {
       miniTag: 'QUEM É O DR. MENDERSON RUFINO',
       title: (
         <h1>
-          Nossa
+          Minha
           <span className="destaque italic font-light"> trajetória</span>{' '}
         </h1>
       ),

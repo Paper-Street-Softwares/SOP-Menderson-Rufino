@@ -12,8 +12,12 @@
   }
 
   [data-theme='default'] .destaque {
-    @apply text-primaryLight;
+    @apply text-primaryDark;
   }
+}
+
+.destaqueHero {
+  @apply text-secondary;
 }
 
 /* default (light) */
