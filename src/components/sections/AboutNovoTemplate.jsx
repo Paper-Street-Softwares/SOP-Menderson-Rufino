@@ -257,6 +257,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                 label={content.texts.navbar.ctaButtonText}
                 colorMode={colorMode}
                 bgClass={`bg-primaryDark text-white`}
+                shineClass={`bg-white/40`}
               />
             </div>
           </Dialog>
